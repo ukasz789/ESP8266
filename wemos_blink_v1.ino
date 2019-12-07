@@ -3,7 +3,7 @@ WiFiServer server(80);
 void setup() {
   
 WiFi.mode(WIFI_AP);
-WiFi.softAP("Hello_IoT", "12345679");
+WiFi.softAP("SSID", "Password");
 server.begin();
 Serial.begin(115200);
 IPAddress HTTPS_ServerIP = WiFi.softAPIP();
