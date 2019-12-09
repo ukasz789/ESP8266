@@ -20,7 +20,6 @@ Serial.println("Ktos sie polaczyl");
 String request = client.readStringUntil('\r');
 Serial.println(request);
 if (request.indexOf("/OFF") != -1) {
-  
   digitalWrite(LED_BUILTIN, HIGH);
 } else if (request.indexOf("/ON") != -1){
 
@@ -30,7 +29,7 @@ String f = "HTTP/1.1 200 OK\r\n";
 f += "Content-Type: text/html\r\n\r\n";
 f += "<!DOCTYPE HTML>\r\n<html>\r\n";
 f += "<h2 style=background-color:DodgerBlue;>My Intrnet of My Things</h2>";
-f += "<h1>Oswietlenie</h1>";
+f += "<h1>Oswietlenie_</h1>";
 f += "<br><input type=\"button\" name=\b1\" value=\"Turn LED ON\" onclick=\"location.href='/ON'\">";
 f += "<br><br><br>";
 f += "<input type=\"button\" name=\"b1\" value=\"Turn LED OFF\" onclick=\"location.href='/OFF'\">";
